@@ -6,6 +6,7 @@ s_list.sort()
 min_num = s_list[0]  # мин
 max_num = s_list[-1]  # макс
 
+
 i_min_num = num_list.index(min_num)  # индекс мин в исходном списке
 i_max_num = num_list.index(max_num)  # индекс макс в исходном списке
 
