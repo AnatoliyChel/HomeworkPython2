@@ -7,7 +7,7 @@ from collections import deque
 
 dict_hex = {"0": 0, "1": 1, "2": 2, "3": 3, "4": 4, "5": 5, "6": 6, "7": 7, "8": 8, "9": 9, "a": 10, "b": 11, "c": 12,
                 "d": 13, "e": 14, "f": 15}
-dict_rev = {value: key for key, value in dict_hex.items()}
+dict_rev = {value: key for key, value in dict_hex.items()}  # перевернутый словарь
 
 def hex_to_dec(hex_num):
     decim = 0
@@ -24,6 +24,7 @@ def dec_to_hex(dec_num):
     while (temp > 0):
         temp = dec_num // 16
         dec_num -= temp * 16
+        # dec_num = dec_num % 16
         hex_num.append(dict_rev.get(dec_num))
         dec_num = temp
     hex_num.reverse()
